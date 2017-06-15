@@ -1,0 +1,9 @@
+<?php
+
+return [
+    'entities' => [
+        'articles' => App\Article::class,
+        'slides' => App\Slide::class,
+        'files' => App\File::class,
+    ],
+];
