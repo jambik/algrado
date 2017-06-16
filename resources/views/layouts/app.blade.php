@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-sm-4 text-center" style="padding-top: 5px; font-size: 12pt; text-transform: uppercase;">
                     <div style="line-height: 16px; margin-bottom: 7px;">Официальный сайт<br>отеля Альградо</div>
-                    <div><img src="img/icon-insta.jpg"></div>
+                    <div><a href="https://www.instagram.com/algrado05/" target="_blank"><img src="img/icon-insta.jpg"></a></div>
                 </div>
                 <div class="col-sm-2" style="padding-top: 15px;">
                     <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#callbackModal">Задать вопрос</button>
