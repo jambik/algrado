@@ -3,6 +3,7 @@
         <div class="modal-content">
             <form action="{{ route('reservation') }}" method="POST" name="form_reservation" id="form_reservation" class="form-horizontal">
                 {{ csrf_field() }}
+                <input type="hidden" name="room" id="room">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="reservationFormLabel">Бронирование номера: <span id="roomName">Стандарт Твин</span></h4>

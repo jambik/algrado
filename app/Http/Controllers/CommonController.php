@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Page;
 use Illuminate\Http\Request;
-use ReCaptcha\ReCaptcha;
 use Snowfire\Beautymail\Beautymail;
 use Validator;
 

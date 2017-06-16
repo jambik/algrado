@@ -9,8 +9,10 @@
 
     @include('beautymail::templates.sunny.contentStart')
 
+
+    <h2 style="text-align: center;"><strong>{{ $input['room'] }}</strong></h2>
     <hr />
-    <p><strong>Персональные данные:</strong></p>
+    <div>&nbsp;</div>
     <p>Имя: {{ $input['name'] }}</p>
     <p>Город: {{ $input['city'] }}</p>
     <p>Телефон: {{ $input['phone'] }}</p>
