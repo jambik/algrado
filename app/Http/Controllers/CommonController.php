@@ -39,8 +39,8 @@ class CommonController extends FrontendController
         $beautymail = app()->make(Beautymail::class);
         $beautymail->send('emails.feedback', ['input' => $request->all()], function($message)
         {
-            $message->from(env('MAIL_ADDRESS'), env('MAIL_NAME'));
-            $message->to($this->settings['email'] ?: env('MAIL_ADDRESS'));
+            $message->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
+            $message->to($this->settings['email'] ?: env('MAIL_FROM_ADDRESS'));
             $message->subject('Обратная связь');
         });
 
@@ -82,8 +82,8 @@ class CommonController extends FrontendController
         $beautymail = app()->make(Beautymail::class);
         $beautymail->send('emails.callback', ['input' => $request->all()], function($message)
         {
-            $message->from(env('MAIL_ADDRESS'), env('MAIL_NAME'));
-            $message->to($this->settings['email'] ?: env('MAIL_ADDRESS'));
+            $message->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
+            $message->to($this->settings['email'] ?: env('MAIL_FROM_ADDRESS'));
             $message->subject('Вопрос с сайта');
         });
 
@@ -133,8 +133,8 @@ class CommonController extends FrontendController
         $beautymail = app()->make(Beautymail::class);
         $beautymail->send('emails.registration', ['input' => $request->all()], function($message)
         {
-            $message->from(env('MAIL_ADDRESS'), env('MAIL_NAME'));
-            $message->to($this->settings['email'] ?: env('MAIL_ADDRESS'));
+            $message->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
+            $message->to($this->settings['email'] ?: env('MAIL_FROM_ADDRESS'));
             $message->subject('Бронирование номера');
         });
 
