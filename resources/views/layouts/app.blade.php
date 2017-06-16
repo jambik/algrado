@@ -435,18 +435,20 @@
                     </dl>
                 </div>
                 <div class="col-sm-5">
-                    <form action="#" method="POST">
+                    <form action="{{ route('feedback') }}" method="POST" name="form_feedback" id="form_feedback">
+                        {{ csrf_field() }}
+                        <div class="form-status"></div>
                         <div class="form-group">
                             <input type="text" name="name" id="name" class="form-control input-lg" placeholder="Представьтесь">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="contact" id="contact" class="form-control input-lg" placeholder="Ваш email или телефон">
+                            <input type="text" name="phone" id="phone" class="form-control input-lg" placeholder="Ваш email или телефон">
                         </div>
                         <div class="form-group">
                             <textarea name="message" id="message" class="form-control input-lg" placeholder="Ваше сообщение" style="height: 250px;"></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-lg btn-block btn-info">Отправить сообщение</button>
+                            <button type="submit" class="btn btn-lg btn-block btn-info form-button">Отправить сообщение</button>
                         </div>
                     </form>
 

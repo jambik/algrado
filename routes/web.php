@@ -93,11 +93,13 @@ Route::group([], function ()
     Route::get('/search', ['as' => 'search', 'uses' => 'SearchController@search']);
 
     # Feedback
-    Route::get('feedback', ['as' => 'feedback', 'uses' => 'CommonController@feedback']);
-    Route::post('feedback', ['as' => 'feedback.send', 'uses' => 'CommonController@feedbackSend']);
+    Route::post('feedback', ['as' => 'feedback', 'uses' => 'CommonController@feedback']);
 
     ## Callback
     Route::post('callback', ['as' => 'callback', 'uses' => 'CommonController@callback']);
+
+    ## Reservation
+    Route::post('reservation', ['as' => 'reservation', 'uses' => 'CommonController@reservation']);
 
     ## Pages
     Route::get('page/{slug}', ['as' => 'page.show', 'uses' => 'PagesController@show']);

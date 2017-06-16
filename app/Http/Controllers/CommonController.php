@@ -12,51 +12,26 @@ use Validator;
 class CommonController extends FrontendController
 {
     /**
-     * Show the feedback page.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function feedback()
-    {
-        $page = Page::findBySlug('feedback');
-
-        return view('feedback', compact('page'));
-    }
-
-    /**
      * Send feedback form.
      *
      * @param Request $request
      * @return Response
      */
-    public function feedbackSend(Request $request)
+    public function feedback(Request $request)
     {
         $rules = [
             'name' => 'required',
-            'email' => 'required_if:phone,""',
-            'phone' => 'required_if:email,""',
+            'phone' => 'required',
             'message' => 'required',
         ];
 
         $messages = [
-            'name.required' => 'Введите Ваше имя. Мы же должны как-то к Вам обращаться :)',
-            'email.required_if' => 'А где же ваш email для обратной связи?',
-            'phone.required_if' => 'Укажите пожалуйста Ваш телефончик для обратной связи',
+            'name.required' => 'Представьтесь пожалуйста',
+            'phone.required' => 'Укажите пожалуйста Ваши контактные данные',
             'message.required' => 'А где собственно сообщение?',
         ];
 
         $validator = Validator::make($request->all(), $rules, $messages);
-
-        $validator->after(function($validator) use ($request)
-        {
-            $recaptcha = new ReCaptcha(env('GOOGLE_RECAPTCHA_SECRET'));
-            $resp = $recaptcha->verify($request->get('g-recaptcha-response'), $_SERVER['REMOTE_ADDR']);
-
-            if ( ! $resp->isSuccess())
-            {
-                $validator->errors()->add('google_recaptcha_error', 'Ошибка reCAPTCHA: '.implode(', ', $resp->getErrorCodes()));
-            }
-        });
 
         if ($validator->fails())
         {
@@ -91,10 +66,12 @@ class CommonController extends FrontendController
     {
         $rules = [
             'phone' => 'required',
+            'message' => 'required',
         ];
 
         $messages = [
             'phone.required' => 'Укажите пожалуйста Ваш телефончик для обратной связи',
+            'message.required' => 'Напишите Ваш вопрос',
         ];
 
         $validator = Validator::make($request->all(), $rules, $messages);
@@ -120,5 +97,56 @@ class CommonController extends FrontendController
         }
 
         return redirect(route('index'))->with('status', 'Вопрос отправлен');
+    }
+
+    /**
+     * Send registration form.
+     *
+     * @param Request $request
+     * @return Response
+     */
+    public function reservation(Request $request)
+    {
+        $rules = [
+            'name' => 'required',
+            'city' => 'required',
+            'phone' => 'required',
+            'days' => 'required',
+            'date' => 'required',
+            'adults' => 'required',
+        ];
+
+        $messages = [
+            'name.required' => 'Представьтесь пожалуйста',
+            'city.required' => 'Укажите Ваш город',
+            'phone.required' => 'Укажите свой телефон для обратной связи',
+            'days.required' => 'Укажите количество ночей, которые вы планируете провести у нас',
+            'date.required' => 'Укажите дату заезда',
+            'adults.required' => 'Укажите количество взрослых',
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails())
+        {
+            $this->throwValidationException($request, $validator);
+        }
+
+        $beautymail = app()->make(Beautymail::class);
+        $beautymail->send('emails.registration', ['input' => $request->all()], function($message)
+        {
+            $message->from(env('MAIL_ADDRESS'), env('MAIL_NAME'));
+            $message->to($this->settings['email'] ?: env('MAIL_ADDRESS'));
+            $message->subject('Бронирование номера');
+        });
+
+        if ($request->ajax()){
+            return response()->json([
+                'status' => 'ok',
+                'message' => 'Бронирование номера оформлено',
+            ]);
+        }
+
+        return redirect(route('index'))->with('status', 'Бронирование номера оформлено');
     }
 }

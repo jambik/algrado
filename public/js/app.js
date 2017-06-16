@@ -16,9 +16,15 @@ $(document).ready(function() {
         });
     }
 
-    if ($('#form_calculation').length) {
-        $('#form_calculation').on('submit', function(e){
+    if ($('#form_reservation').length) {
+        $('#form_reservation').on('submit', function(e){
             ajaxFormSubmit(e, reservationSuccess);
+        });
+    }
+
+    if ($('#form_feedback').length) {
+        $('#form_feedback').on('submit', function(e){
+            ajaxFormSubmit(e, feedbackSuccess);
         });
     }
 
@@ -196,6 +202,12 @@ function callbackSuccess(data)
 function reservationSuccess(data)
 {
     $('#reservationForm').modal('hide');
+    showNoty(data.message, 'success');
+}
+
+function feedbackSuccess(data)
+{
+    $("#form_feedback")[0].reset();
     showNoty(data.message, 'success');
 }
 

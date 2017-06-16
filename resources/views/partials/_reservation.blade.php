@@ -1,7 +1,7 @@
 <div class="modal fade" id="reservationForm" tabindex="-1" role="dialog" aria-labelledby="reservationFormLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form action="#" method="POST" name="form_callback" id="form_reservation" class="form-horizontal">
+            <form action="{{ route('reservation') }}" method="POST" name="form_reservation" id="form_reservation" class="form-horizontal">
                 {{ csrf_field() }}
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
@@ -97,7 +97,7 @@
                     <div class="form-group">
                         <label for="r_name" class="col-sm-5 control-label">Дополнительная информация</label>
                         <div class="col-sm-6">
-                            <textarea name="info" class="form-control" rows="5"></textarea>
+                            <textarea name="message" class="form-control" rows="5"></textarea>
                         </div>
                     </div>
                 </div>

@@ -12,8 +12,7 @@
     <hr />
     <p><strong>Данные от пользователя:</strong></p>
     <p>Имя: {{ $input['name'] }}</p>
-    <p>Телефон: {{ $input['phone'] }}</p>
-    <p>Email: {{ $input['email'] }}</p>
+    <p>Контактные данные: {{ $input['phone'] }}</p>
     <p>Сообщение: {{ $input['message'] }}</p>
 
     @include('beautymail::templates.sunny.contentEnd')
