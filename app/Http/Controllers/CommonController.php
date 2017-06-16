@@ -109,16 +109,16 @@ class CommonController extends FrontendController
         {
             $message->from(env('MAIL_ADDRESS'), env('MAIL_NAME'));
             $message->to($this->settings['email'] ?: env('MAIL_ADDRESS'));
-            $message->subject('Обратный звонок');
+            $message->subject('Вопрос с сайта');
         });
 
         if ($request->ajax()){
             return response()->json([
                 'status' => 'ok',
-                'message' => 'Заявка на обратный звонок отправлена',
+                'message' => 'Вопрос отправлен',
             ]);
         }
 
-        return redirect(route('index'))->with('status', 'Заявка на обратный звонок отправлена');
+        return redirect(route('index'))->with('status', 'Вопрос отправлен');
     }
 }

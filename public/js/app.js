@@ -1,13 +1,102 @@
 $(document).ready(function() {
 
+    $(window).bind('scroll', function () {
+        if ($(window).scrollTop() > 300) {
+            $('nav').addClass('fixed');
+            $('#fixed-padding').show();
+        } else {
+            $('nav').removeClass('fixed');
+            $('#fixed-padding').hide();
+        }
+    });
+
     if ($('#form_callback').length) {
         $('#form_callback').on('submit', function(e){
             ajaxFormSubmit(e, callbackSuccess);
-        })
+        });
     }
 
-    if ($('.popup-gallery').length) {
-        $('.popup-gallery').magnificPopup({
+    if ($('#form_calculation').length) {
+        $('#form_calculation').on('submit', function(e){
+            ajaxFormSubmit(e, reservationSuccess);
+        });
+    }
+
+    if ($('.input-date').length) {
+
+        $.datetimepicker.setLocale('ru');
+        $('.input-date').datetimepicker({
+            format: 'd-m-Y',
+            timepicker: false,
+            dayOfWeekStart: 1
+        });
+
+    }
+
+    $("#form_recall").submit(function() {
+
+        // Место для отображения ошибок в форме
+        var formStatus = $(this).find('.form-status');
+        if (formStatus.length) {
+            formStatus.html('');
+        }
+
+        // Анимированная кнопка при отправки формы
+        var formButton = $(this).find('.form-button');
+        if (formButton.length) {
+            formButton.append(' <i class="fa fa-spinner fa-spin"></i>');
+            formButton.prop('disabled', true);
+        }
+
+        var formData = new FormData($(this)[0]);
+        var url = $(this).attr("action");
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (data)
+            {
+                $('#recallModal').modal('hide');
+                showNoty(data.message, 'success');
+            },
+            error: function (jqXHR, textStatus, errorThrown)
+            {
+                if (formStatus.length && jqXHR.status == 422) // Если статус 422 (неправильные входные данные) то отображаем ошибки
+                {
+                    var formStatusText = "<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button><div class='text-uppercase'>" + (formStatus.data('errorText') ? formStatus.data('errorText') : 'Ошибка!') + "</div><ul>";
+
+                    $.each(jqXHR.responseJSON, function (index, value) {
+                        formStatusText += "<li>" + value + "</li>";
+                    });
+
+                    formStatusText += "</ul></div>";
+                    formStatus.html(formStatusText);
+                    $('body').scrollTo(formStatus, 500);
+                }
+                else
+                {
+                    sweetAlert("", "Ошибка при запросе к серсеру", 'error');
+                }
+            },
+            complete: function (jqXHR, textStatus)
+            {
+                if (formButton.length)
+                {
+                    formButton.find('i').remove();
+                    formButton.prop('disabled', false);
+                }
+            }
+        });
+
+        return false;
+    });
+
+    if ($('.gallery').length) {
+        $('.gallery').magnificPopup({
             type: 'image',
             zoom: {
                 enabled: true
@@ -29,6 +118,13 @@ $(document).ready(function() {
                 enabled: true
             },
             tLoading: 'Загрузка...'
+        });
+    }
+
+    if ($('.ajax-popup').length) {
+        $('.ajax-popup').magnificPopup({
+            type: 'ajax',
+            overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
         });
     }
 
@@ -97,9 +193,15 @@ function callbackSuccess(data)
     showNoty(data.message, 'success');
 }
 
+function reservationSuccess(data)
+{
+    $('#reservationForm').modal('hide');
+    showNoty(data.message, 'success');
+}
+
 function showNoty(message, type)
 {
-    noty({
+    new Noty({
         text: message,
         type: type,
         layout: 'topCenter',
@@ -111,44 +213,5 @@ function showNoty(message, type)
             easing: 'swing', // easing
             speed: 500 // opening & closing animation speed
         }
-    });
-}
-
-function avatarSelected()
-{
-    startCropper($('#avatar_file')[0].files[0]);
-
-    $('#avatar_cropper').show();
-    $('#avatar_current').hide();
-}
-
-function startCropper(file)
-{
-    var $img = $('<img src="' + URL.createObjectURL(file) + '">');
-    $('#avatar_wrapper').empty().html($img);
-
-    $img.cropper({
-        aspectRatio: 1,
-        preview: $('.avatar-preview').selector,
-        strict: true,
-        guides: false,
-        crop: function (e) {
-            var json = [
-                '{"x":' + e.x,
-                '"y":' + e.y,
-                '"height":' + e.height,
-                '"width":' + e.width,
-                '"rotate":' + e.rotate + '}'
-            ].join();
-            $('#avatar_data').val(json);
-        }
-    });
-}
-
-function cancelAvatarUpload()
-{
-    URL.revokeObjectURL($('#avatar_file')[0].files[0].url); // Revoke the old one
-
-    $('#avatar_cropper').hide();
-    $('#avatar_current').show();
+    }).show();
 }

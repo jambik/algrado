@@ -1,6 +1,6 @@
 @if ($slides->count())
     <section id="slides">
-        <div class="container">
+        <div>
             <div id="slider" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     @foreach ($slides as $key => $val)
@@ -13,8 +13,10 @@
                         <div class="item{{ $key == 0 ? ' active' : '' }}">
                             <img src="/images/original/{{ $val->img_url . $val->image }}">
                             <div class="carousel-caption">
-                                {!! $val->title ? '<h2>' . $val->title . '</h2>' : '' !!}
-                                {!! $val->text ? '<p>' . $val->text . '</p>' : '' !!}
+                                <div class="carousel-caption-bg">
+                                    {!! $val->title ? '<h2>' . $val->title . '</h2>' : '' !!}
+                                    {!! $val->text ? '<p>' . $val->text . '</p>' : '' !!}
+                                </div>
                             </div>
                         </div>
                     @endforeach
@@ -30,5 +32,6 @@
                 </a>
             </div>
         </div>
+        <div id="appartments_top"></div>
     </section>
 @endif

@@ -16,9 +16,11 @@ mix.js('resources/assets/js/test.js', 'public/js/vue-test.js');
 
 /* App files */
 mix.combine([
-    'bower_components/bootswatch/paper/bootstrap.min.css',
+    'bower_components/bootstrap/dist/css/bootstrap.min.css',
     'bower_components/sweetalert/dist/sweetalert.css',
+    'bower_components/noty/lib/noty.css',
     'bower_components/magnific-popup/dist/magnific-popup.css',
+    'bower_components/datetimepicker/jquery.datetimepicker.css',
     'bower_components/cropper/dist/cropper.min.css',
     'bower_components/font-awesome/css/font-awesome.min.css',
     'bower_components/animate.css/animate.min.css'
@@ -28,8 +30,9 @@ mix.combine([
     'bower_components/bootstrap/dist/js/bootstrap.min.js',
     'bower_components/sweetalert/dist/sweetalert.min.js',
     'bower_components/jquery.scrollTo/jquery.scrollTo.min.js',
-    'bower_components/noty/js/noty/packaged/jquery.noty.packaged.min.js',
+    'bower_components/noty/lib/noty.min.js',
     'bower_components/magnific-popup/dist/jquery.magnific-popup.min.js',
+    'bower_components/datetimepicker/build/jquery.datetimepicker.full.min.js',
     'bower_components/cropper/dist/cropper.min.js'
 ], 'public/js/app.bundle.js');
 
@@ -40,6 +43,7 @@ mix.combine([
 mix.combine([
     'bower_components/bootstrap/dist/css/bootstrap.min.css',
     'bower_components/animate.css/animate.min.css',
+    'bower_components/noty/lib/noty.css',
     'bower_components/sweetalert/dist/sweetalert.css',
     'bower_components/select2/dist/css/select2.min.css',
     'bower_components/dropzone/dist/min/dropzone.min.css',
@@ -53,7 +57,7 @@ mix.combine([
     'bower_components/bootstrap/dist/js/bootstrap.min.js',
     'bower_components/bootstrap-filestyle/src/bootstrap-filestyle.min.js',
     'node_modules/vue/dist/vue.min.js',
-    'bower_components/noty/js/noty/packaged/jquery.noty.packaged.min.js',
+    'bower_components/noty/lib/noty.min.js',
     'bower_components/jquery.scrollTo/jquery.scrollTo.min.js',
     'bower_components/sweetalert/dist/sweetalert.min.js',
     'bower_components/select2/dist/js/select2.min.js',

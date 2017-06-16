@@ -2,7 +2,7 @@
     @if (Session::has('flash_notification.overlay'))
         <script type="text/javascript">
             $(document).ready(function() {
-                noty({
+                new Noty({
                     text: '<p><strong>{{ Session::get('flash_notification.title') }}</strong></p> {{ Session::get('flash_notification.message') }}',
                     type: 'modal',
                     layout: 'topCenter',
@@ -23,13 +23,13 @@
                             }
                         }
                     ]
-                });
+                }).show();
             });
         </script>
     @else
         <script type="text/javascript">
             $(document).ready(function() {
-                noty({
+                new Noty({
                     text: '{{ Session::get('flash_notification.message') }}',
                     type: '{{ Session::get('flash_notification.level') }}',
                     layout: 'topCenter',
@@ -41,7 +41,7 @@
                         easing: 'swing', // easing
                         speed: 500 // opening & closing animation speed
                     }
-                });
+                }).show();
             });
         </script>
     @endif
