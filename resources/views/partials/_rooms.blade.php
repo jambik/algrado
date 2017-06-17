@@ -7,47 +7,47 @@
                 <h4 class="modal-title" id="roomStandartTwinLabel">Стандарт Твин</h4>
             </div>
             <div class="modal-body">
-                <div class="room-images">
-                    <div class="room-image">
-                        <img src="img/appartment-1.jpg" class="img-responsive roomImage">
-                        <div class="room-icons">
-                            <img data-image="img/appartment-1.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_01.jpg">
-                            <img data-image="img/appartment-2.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_02.jpg">
-                            <img data-image="img/appartment-3.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_03.jpg">
-                            <img data-image="img/appartment-4.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_04.jpg">
-                            <img data-image="img/appartment-5.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_05.jpg">
-                            <img data-image="img/appartment-6.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_06.jpg">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <img src="img/appartment-1.jpg" class="img-responsive roomImage">
+                            <div class="room-icons">
+                                <img data-image="img/appartment-1.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_01.jpg">
+                                <img data-image="img/appartment-2.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_02.jpg">
+                                <img data-image="img/appartment-3.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_03.jpg">
+                                <img data-image="img/appartment-4.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_04.jpg">
+                                <img data-image="img/appartment-5.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_05.jpg">
+                                <img data-image="img/appartment-6.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_06.jpg">
+                            </div>
                         </div>
-                    </div>
-                    <div class="room-spec">
-                        <div class="room-persons">
-                            <img src="img/icon-adult.png">
-                            <img src="img/icon-adult.png">
-                            <img src="img/icon-child-alpha.png">
-                            <img src="img/icon-child-alpha.png">
-                        </div>
-                        <div>2 кровати 140 х 200, 24 м<sup>2</sup></div>
+                        <div class="col-sm-5">
+                            <div class="room-persons">
+                                <img src="img/icon-adult.png">
+                                <img src="img/icon-adult.png">
+                                <img src="img/icon-child-alpha.png">
+                                <img src="img/icon-child-alpha.png">
+                            </div>
+                            <div>2 кровати 140 х 200, 24 м<sup>2</sup></div>
 
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <table class="table table-bordered">
-                            <tr>
-                                <th colspan="3" class="text-center">СТОИМОСТЬ ПРОЖИВАНИЯ<br>(руб/сутки за номер)</th>
-                            </tr>
-                            <tr class="tr-dates">
-                                <th>1 июня - 25 июня</th>
-                                <th>27 июня - 31 августа</th>
-                                <th>1 сентябрпя - 30 сентября</th>
-                            </tr>
-                            <tr>
-                                <td>6000</td>
-                                <td>7600</td>
-                                <td>6000</td>
-                            </tr>
-                        </table>
+                            <p>&nbsp;</p>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th colspan="3" class="text-center">СТОИМОСТЬ ПРОЖИВАНИЯ<br>(руб/сутки за номер)</th>
+                                </tr>
+                                <tr class="tr-dates">
+                                    <th>1 июня - 25 июня</th>
+                                    <th>27 июня - 31 августа</th>
+                                    <th>1 сентябрпя - 30 сентября</th>
+                                </tr>
+                                <tr>
+                                    <td>6000</td>
+                                    <td>7600</td>
+                                    <td>6000</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <div class="clearfix"></div>
 
                 <div class="room-text">
                     <div class="room-description">стильные номера с двумя просторными кроватями, площадью 24 м<sup>2</sup></div>
@@ -98,45 +98,45 @@
                 <h4 class="modal-title" id="roomStandartDoubleTwinLabel">Стандарт Дабл Твин</h4>
             </div>
             <div class="modal-body">
-                <div class="room-images">
-                    <div class="room-image">
-                        <img src="img/appartment-1.jpg" class="img-responsive roomImage">
-                        <div class="room-icons">
-                            <img data-image="img/appartment-1.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_01.jpg">
-                            <img data-image="img/appartment-2.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_02.jpg">
-                            <img data-image="img/appartment-3.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_03.jpg">
-                            <img data-image="img/appartment-4.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_04.jpg">
-                            <img data-image="img/appartment-5.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_05.jpg">
-                            <img data-image="img/appartment-6.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_06.jpg">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <img src="img/appartment-1.jpg" class="img-responsive roomImage">
+                            <div class="room-icons">
+                                <img data-image="img/appartment-1.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_01.jpg">
+                                <img data-image="img/appartment-2.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_02.jpg">
+                                <img data-image="img/appartment-3.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_03.jpg">
+                                <img data-image="img/appartment-4.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_04.jpg">
+                                <img data-image="img/appartment-5.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_05.jpg">
+                                <img data-image="img/appartment-6.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_06.jpg">
+                            </div>
                         </div>
-                    </div>
-                    <div class="room-spec">
-                        <div class="room-persons">
-                            <img src="img/icon-adult.png">
-                            <img src="img/icon-adult.png">
-                        </div>
-                        <div>2 кровати 140 х 200, 24 м<sup>2</sup></div>
+                        <div class="col-sm-5">
+                            <div class="room-persons">
+                                <img src="img/icon-adult.png">
+                                <img src="img/icon-adult.png">
+                            </div>
+                            <div>2 кровати 140 х 200, 24 м<sup>2</sup></div>
 
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <table class="table table-bordered">
-                            <tr>
-                                <th colspan="3" class="text-center">СТОИМОСТЬ ПРОЖИВАНИЯ<br>(руб/сутки за номер)</th>
-                            </tr>
-                            <tr class="tr-dates">
-                                <th>1 июня - 25 июня</th>
-                                <th>27 июня - 31 августа</th>
-                                <th>1 сентябрпя - 30 сентября</th>
-                            </tr>
-                            <tr>
-                                <td>6000</td>
-                                <td>7600</td>
-                                <td>6000</td>
-                            </tr>
-                        </table>
+                            <p>&nbsp;</p>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th colspan="3" class="text-center">СТОИМОСТЬ ПРОЖИВАНИЯ<br>(руб/сутки за номер)</th>
+                                </tr>
+                                <tr class="tr-dates">
+                                    <th>1 июня - 25 июня</th>
+                                    <th>27 июня - 31 августа</th>
+                                    <th>1 сентябрпя - 30 сентября</th>
+                                </tr>
+                                <tr>
+                                    <td>6000</td>
+                                    <td>7600</td>
+                                    <td>6000</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <div class="clearfix"></div>
 
                 <div class="room-text">
                     <div class="room-description">стильные номера с двумя просторными кроватями, площадью 24 м<sup>2</sup></div>
@@ -187,46 +187,46 @@
                 <h4 class="modal-title" id="roomStandartPlusLabel">Стандарт Плюс</h4>
             </div>
             <div class="modal-body">
-                <div class="room-images">
-                    <div class="room-image">
-                        <img src="img/appartment-1.jpg" class="img-responsive roomImage">
-                        <div class="room-icons">
-                            <img data-image="img/appartment-1.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_01.jpg">
-                            <img data-image="img/appartment-2.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_02.jpg">
-                            <img data-image="img/appartment-3.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_03.jpg">
-                            <img data-image="img/appartment-4.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_04.jpg">
-                            <img data-image="img/appartment-5.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_05.jpg">
-                            <img data-image="img/appartment-6.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_06.jpg">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <img src="img/appartment-1.jpg" class="img-responsive roomImage">
+                            <div class="room-icons">
+                                <img data-image="img/appartment-1.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_01.jpg">
+                                <img data-image="img/appartment-2.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_02.jpg">
+                                <img data-image="img/appartment-3.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_03.jpg">
+                                <img data-image="img/appartment-4.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_04.jpg">
+                                <img data-image="img/appartment-5.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_05.jpg">
+                                <img data-image="img/appartment-6.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_06.jpg">
+                            </div>
                         </div>
-                    </div>
-                    <div class="room-spec">
-                        <div class="room-persons">
-                            <img src="img/icon-adult.png">
-                            <img src="img/icon-adult.png">
-                            <img src="img/icon-child-alpha.png">
-                        </div>
-                        <div>2 кровати 140 х 200, 24 м<sup>2</sup></div>
+                        <div class="col-sm-5">
+                            <div class="room-persons">
+                                <img src="img/icon-adult.png">
+                                <img src="img/icon-adult.png">
+                                <img src="img/icon-child-alpha.png">
+                            </div>
+                            <div>2 кровати 140 х 200, 24 м<sup>2</sup></div>
 
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <table class="table table-bordered">
-                            <tr>
-                                <th colspan="3" class="text-center">СТОИМОСТЬ ПРОЖИВАНИЯ<br>(руб/сутки за номер)</th>
-                            </tr>
-                            <tr class="tr-dates">
-                                <th>1 июня - 25 июня</th>
-                                <th>27 июня - 31 августа</th>
-                                <th>1 сентябрпя - 30 сентября</th>
-                            </tr>
-                            <tr>
-                                <td>6400</td>
-                                <td>8000</td>
-                                <td>6400</td>
-                            </tr>
-                        </table>
+                            <p>&nbsp;</p>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th colspan="3" class="text-center">СТОИМОСТЬ ПРОЖИВАНИЯ<br>(руб/сутки за номер)</th>
+                                </tr>
+                                <tr class="tr-dates">
+                                    <th>1 июня - 25 июня</th>
+                                    <th>27 июня - 31 августа</th>
+                                    <th>1 сентябрпя - 30 сентября</th>
+                                </tr>
+                                <tr>
+                                    <td>6400</td>
+                                    <td>8000</td>
+                                    <td>6400</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <div class="clearfix"></div>
 
                 <div class="room-text">
                     <div class="room-description">стильные номера с двумя просторными кроватями, площадью 24 м<sup>2</sup></div>
@@ -277,46 +277,46 @@
                 <h4 class="modal-title" id="roomStandartPlusViewLabel">Стандарт Плюс с видом на море</h4>
             </div>
             <div class="modal-body">
-                <div class="room-images">
-                    <div class="room-image">
-                        <img src="img/appartment-1.jpg" class="img-responsive roomImage">
-                        <div class="room-icons">
-                            <img data-image="img/appartment-1.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_01.jpg">
-                            <img data-image="img/appartment-2.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_02.jpg">
-                            <img data-image="img/appartment-3.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_03.jpg">
-                            <img data-image="img/appartment-4.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_04.jpg">
-                            <img data-image="img/appartment-5.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_05.jpg">
-                            <img data-image="img/appartment-6.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_06.jpg">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <img src="img/appartment-1.jpg" class="img-responsive roomImage">
+                            <div class="room-icons">
+                                <img data-image="img/appartment-1.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_01.jpg">
+                                <img data-image="img/appartment-2.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_02.jpg">
+                                <img data-image="img/appartment-3.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_03.jpg">
+                                <img data-image="img/appartment-4.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_04.jpg">
+                                <img data-image="img/appartment-5.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_05.jpg">
+                                <img data-image="img/appartment-6.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_06.jpg">
+                            </div>
                         </div>
-                    </div>
-                    <div class="room-spec">
-                        <div class="room-persons">
-                            <img src="img/icon-adult.png">
-                            <img src="img/icon-adult.png">
-                            <img src="img/icon-child-alpha.png">
-                        </div>
-                        <div>2 кровати 140 х 200, 24 м<sup>2</sup></div>
+                        <div class="col-sm-5">
+                            <div class="room-persons">
+                                <img src="img/icon-adult.png">
+                                <img src="img/icon-adult.png">
+                                <img src="img/icon-child-alpha.png">
+                            </div>
+                            <div>2 кровати 140 х 200, 24 м<sup>2</sup></div>
 
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <table class="table table-bordered">
-                            <tr>
-                                <th colspan="3" class="text-center">СТОИМОСТЬ ПРОЖИВАНИЯ<br>(руб/сутки за номер)</th>
-                            </tr>
-                            <tr class="tr-dates">
-                                <th>1 июня - 25 июня</th>
-                                <th>27 июня - 31 августа</th>
-                                <th>1 сентябрпя - 30 сентября</th>
-                            </tr>
-                            <tr>
-                                <td>6800</td>
-                                <td>8600</td>
-                                <td>6800</td>
-                            </tr>
-                        </table>
+                            <p>&nbsp;</p>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th colspan="3" class="text-center">СТОИМОСТЬ ПРОЖИВАНИЯ<br>(руб/сутки за номер)</th>
+                                </tr>
+                                <tr class="tr-dates">
+                                    <th>1 июня - 25 июня</th>
+                                    <th>27 июня - 31 августа</th>
+                                    <th>1 сентябрпя - 30 сентября</th>
+                                </tr>
+                                <tr>
+                                    <td>6800</td>
+                                    <td>8600</td>
+                                    <td>6800</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <div class="clearfix"></div>
 
                 <div class="room-text">
                     <div class="room-description">стильные номера с двумя просторными кроватями, площадью 24 м<sup>2</sup></div>
@@ -367,47 +367,47 @@
                 <h4 class="modal-title" id="roomStudioLabel">Студия с видом на море</h4>
             </div>
             <div class="modal-body">
-                <div class="room-images">
-                    <div class="room-image">
-                        <img src="img/appartment-1.jpg" class="img-responsive roomImage">
-                        <div class="room-icons">
-                            <img data-image="img/appartment-1.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_01.jpg">
-                            <img data-image="img/appartment-2.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_02.jpg">
-                            <img data-image="img/appartment-3.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_03.jpg">
-                            <img data-image="img/appartment-4.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_04.jpg">
-                            <img data-image="img/appartment-5.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_05.jpg">
-                            <img data-image="img/appartment-6.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_06.jpg">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <img src="img/appartment-1.jpg" class="img-responsive roomImage">
+                            <div class="room-icons">
+                                <img data-image="img/appartment-1.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_01.jpg">
+                                <img data-image="img/appartment-2.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_02.jpg">
+                                <img data-image="img/appartment-3.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_03.jpg">
+                                <img data-image="img/appartment-4.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_04.jpg">
+                                <img data-image="img/appartment-5.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_05.jpg">
+                                <img data-image="img/appartment-6.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_06.jpg">
+                            </div>
                         </div>
-                    </div>
-                    <div class="room-spec">
-                        <div class="room-persons">
-                            <img src="img/icon-adult.png">
-                            <img src="img/icon-adult.png">
-                            <img src="img/icon-adult-alpha.png">
-                            <img src="img/icon-adult-alpha.png">
-                        </div>
-                        <div>2 кровати 140 х 200, 24 м<sup>2</sup></div>
+                        <div class="col-sm-5">
+                            <div class="room-persons">
+                                <img src="img/icon-adult.png">
+                                <img src="img/icon-adult.png">
+                                <img src="img/icon-adult-alpha.png">
+                                <img src="img/icon-adult-alpha.png">
+                            </div>
+                            <div>2 кровати 140 х 200, 24 м<sup>2</sup></div>
 
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <table class="table table-bordered">
-                            <tr>
-                                <th colspan="3" class="text-center">СТОИМОСТЬ ПРОЖИВАНИЯ<br>(руб/сутки за номер)</th>
-                            </tr>
-                            <tr class="tr-dates">
-                                <th>1 июня - 25 июня</th>
-                                <th>27 июня - 31 августа</th>
-                                <th>1 сентябрпя - 30 сентября</th>
-                            </tr>
-                            <tr>
-                                <td>7700</td>
-                                <td>9600</td>
-                                <td>7700</td>
-                            </tr>
-                        </table>
+                            <p>&nbsp;</p>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th colspan="3" class="text-center">СТОИМОСТЬ ПРОЖИВАНИЯ<br>(руб/сутки за номер)</th>
+                                </tr>
+                                <tr class="tr-dates">
+                                    <th>1 июня - 25 июня</th>
+                                    <th>27 июня - 31 августа</th>
+                                    <th>1 сентябрпя - 30 сентября</th>
+                                </tr>
+                                <tr>
+                                    <td>7700</td>
+                                    <td>9600</td>
+                                    <td>7700</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <div class="clearfix"></div>
 
                 <div class="room-text">
                     <div class="room-description">стильные номера с двумя просторными кроватями, площадью 24 м<sup>2</sup></div>
@@ -458,47 +458,47 @@
                 <h4 class="modal-title" id="roomCottageLabel">Коттедж семейный</h4>
             </div>
             <div class="modal-body">
-                <div class="room-images">
-                    <div class="room-image">
-                        <img src="img/appartment-1.jpg" class="img-responsive roomImage">
-                        <div class="room-icons">
-                            <img data-image="img/appartment-1.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_01.jpg">
-                            <img data-image="img/appartment-2.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_02.jpg">
-                            <img data-image="img/appartment-3.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_03.jpg">
-                            <img data-image="img/appartment-4.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_04.jpg">
-                            <img data-image="img/appartment-5.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_05.jpg">
-                            <img data-image="img/appartment-6.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_06.jpg">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <img src="img/appartment-1.jpg" class="img-responsive roomImage">
+                            <div class="room-icons">
+                                <img data-image="img/appartment-1.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_01.jpg">
+                                <img data-image="img/appartment-2.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_02.jpg">
+                                <img data-image="img/appartment-3.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_03.jpg">
+                                <img data-image="img/appartment-4.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_04.jpg">
+                                <img data-image="img/appartment-5.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_05.jpg">
+                                <img data-image="img/appartment-6.jpg" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="img/appartment-1_06.jpg">
+                            </div>
                         </div>
-                    </div>
-                    <div class="room-spec">
-                        <div class="room-persons">
-                            <img src="img/icon-adult.png">
-                            <img src="img/icon-adult.png">
-                            <img src="img/icon-adult-alpha.png">
-                            <img src="img/icon-adult-alpha.png">
-                        </div>
-                        <div>2 кровати 140 х 200, 24 м<sup>2</sup></div>
+                        <div class="col-sm-5">
+                            <div class="room-persons">
+                                <img src="img/icon-adult.png">
+                                <img src="img/icon-adult.png">
+                                <img src="img/icon-adult-alpha.png">
+                                <img src="img/icon-adult-alpha.png">
+                            </div>
+                            <div>2 кровати 140 х 200, 24 м<sup>2</sup></div>
 
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <table class="table table-bordered">
-                            <tr>
-                                <th colspan="3" class="text-center">СТОИМОСТЬ ПРОЖИВАНИЯ<br>(руб/сутки за номер)</th>
-                            </tr>
-                            <tr class="tr-dates">
-                                <th>1 июня - 25 июня</th>
-                                <th>27 июня - 31 августа</th>
-                                <th>1 сентябрпя - 30 сентября</th>
-                            </tr>
-                            <tr>
-                                <td>16 000</td>
-                                <td>19 000</td>
-                                <td>16 000</td>
-                            </tr>
-                        </table>
+                            <p>&nbsp;</p>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th colspan="3" class="text-center">СТОИМОСТЬ ПРОЖИВАНИЯ<br>(руб/сутки за номер)</th>
+                                </tr>
+                                <tr class="tr-dates">
+                                    <th>1 июня - 25 июня</th>
+                                    <th>27 июня - 31 августа</th>
+                                    <th>1 сентябрпя - 30 сентября</th>
+                                </tr>
+                                <tr>
+                                    <td>16 000</td>
+                                    <td>19 000</td>
+                                    <td>16 000</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <div class="clearfix"></div>
 
                 <div class="room-text">
                     <div class="room-description">стильные номера с двумя просторными кроватями, площадью 24 м<sup>2</sup></div>

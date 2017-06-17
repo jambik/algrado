@@ -80,15 +80,9 @@ div.navbar-toggle { float: left; color: #fff; font-size: 16pt; margin: 5px 0 0 1
 .appartment-description { margin: 10px 9% 0 9%; }
 .appartment-button { margin: 20px 0 0 0; }
 
-.room-images { }
-.room-images a { margin: 0 0 20px 0; }
-.room-images a.active { border-color: #000; }
-.room-images .room-image { width: 500px; float: left; margin: 0 0 0 10px; }
-.room-images .room-icons { margin-top: 10px; }
-.room-images .room-icons img { width: 60px; border: 1px solid #444; cursor: pointer; }
-.room-images .room-spec { float: left; margin: 0 0 0 20px; font-size: 12pt; width: 320px; }
+.room-icons { margin: 10px 0 20px 0; }
+.room-icons img { width: 60px; border: 1px solid #444; cursor: pointer; margin-bottom: 5px; }
 .room-images .room-persons { margin: 0 0 20px 0; font-size: 12pt; }
-.room-images .room-price { color: #921e12; font-weight: 700; margin: 24px 0; }
 .room-description { font-weight: 300; font-size: 18pt; margin: 20px 0 0 0; }
 .room-comfort { margin: 20px 0 0 0; font-size: 12pt; }
 
