@@ -16,8 +16,6 @@ h4 { font-size: 18pt; font-weight: 300; }
 .body {  }
 .main-container { position: relative; margin: 0 auto; background: #fff; }
 
-header { min-height: 450px; background: #585477 url('../img/header-1.jpg') center center no-repeat; }
-
 nav { text-align: center; }
 nav ul { *zoom:1; list-style: none; padding: 0; margin: 0; font-size: 14pt; display: inline-block; }
 nav ul:before, nav ul:after { content:""; display:table; }
@@ -42,12 +40,22 @@ nav.fixed li ul a { color: #fff; }
 #fixed-padding { height: 67px; }
 
 #logo { margin: 15px 0 0 0; }
-#menu { background: #337ab7; padding: 16px 0; margin: 10px 0 0 0; }
+.header-logo { padding-top: 20px; }
+.header-logo img { margin: 0 auto; }
+.header-official { padding-top: 5px; font-size: 12pt; text-transform: uppercase; text-align: center; }
+.header-official span { display: inline-block; max-width: 180px; line-height: 16px; margin-bottom: 7px; }
+.header-button { padding-top: 15px; }
+.header-phones { text-align: right; }
 .phone-number { font-size: 22pt; font-weight: 300; line-height: 30px; }
 .worktime { font-size: 11pt; margin: 10px 0 0 0; }
+#menu { background: #337ab7; padding: 16px 0; margin: 10px 0 0 0; }
+div.navbar-toggle { float: left; color: #fff; font-size: 16pt; margin: 5px 0 0 15px; }
+
+#meteo { position: relative; z-index: 9; top: 15px; margin-left:15px; margin-bottom: -90px; }
 .carousel-caption-bg { background: rgba(0,0,0,0.5); }
 .carousel-caption-bg h2 { padding-top: 10px; }
 .carousel-caption-bg p { padding-bottom: 10px; }
+
 #reservationForm label small { font-size: 80%; font-weight: normal; display: block; }
 
 [data-slides] {
@@ -104,8 +112,7 @@ nav.fixed li ul a { color: #fff; }
 .condition { margin-top: 20px; }
 
 #gallery { background: #eee; }
-.gallery-photos a { display: block; float: left; }
-.gallery-photos img { width: 188.5px; }
+.gallery-photos div { padding: 0; }
 
 .contacts-info { font-size: 16pt; }
 
@@ -179,19 +186,20 @@ nav.fixed { z-index: 999; }
     .text-xl { font-size: 30pt; }
     .text-l { font-size: 20pt; }
 
-    header { min-height: auto; }
-    header nav { margin-top: 10px; margin-bottom: 20px; }
-    header .phone-number { font-size: 16pt; margin-right: 10%; margin-left: 10%; }
-
-    #about-us { padding: 50px 0; }
-
-    footer .title { font-size: 14pt; text-transform: uppercase; margin-bottom: 15px; margin-top: 40px; }
-    footer li { margin-bottom: 4px; }
+    .header-official span { max-width: none; margin: 10px 0 7px 0; }
+    .header-button { text-align: center; }
+    .header-phones { text-align: center; margin-top: 15px; }
+    #menu { background: #337ab7; padding: 0; margin: 10px 0 0 0; }
+    div.navbar-toggle { font-size: 12pt; }
 
     .navbar-collapse.in { overflow-y: inherit; }
     nav { text-align: center; margin-bottom: 20px; }
     nav ul { display: block; }
-    nav ul > li { display: block; position:relative; margin: 0 10px; background: rgba(0,0,0,0.3); border-bottom: 1px solid #aaa; }
+    nav ul > li { display: block; position:relative; margin: 0 10px; border-bottom: 1px solid #fff; }
+
+    #meteo { display: none; }
+    .carousel-caption-bg h2 { padding-top: 10px; font-size: 14pt; }
+    .carousel-caption-bg p { padding-bottom: 10px; font-size: 10pt; }
 }
 
 /* Small devices (tablets, 768px and up) */

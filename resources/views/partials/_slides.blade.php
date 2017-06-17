@@ -11,7 +11,7 @@
                 <div class="carousel-inner" role="listbox">
                     @foreach ($slides as $key => $val)
                         <div class="item{{ $key == 0 ? ' active' : '' }}">
-                            <img src="/images/original/{{ $val->img_url . $val->image }}">
+                            <img style="min-height: 250px;" src="/images/original/{{ $val->img_url . $val->image }}">
                             <div class="carousel-caption">
                                 <div class="carousel-caption-bg">
                                     {!! $val->title ? '<h2>' . $val->title . '</h2>' : '' !!}

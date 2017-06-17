@@ -7,14 +7,13 @@
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
 
     <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link href="{{ asset('/css/app.bundle.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ asset('/css/app.css') }}" type="text/css" rel="stylesheet">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <!-- Scripts -->
     <script src="{{ asset('/js/app.bundle.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/js/app.js') }}" type="text/javascript"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 
     @yield('header_scripts')
 

@@ -33,17 +33,17 @@
         <div class="container">
             <div id="fixed-padding" style="display: none;"></div>
             <div class="row">
-                <div class="col-sm-3" style="padding-top: 20px;">
+                <div class="col-sm-3 col-md-3 header-logo">
                     <a href="/"><img src="img/logo-blue-horizontal.png" class="img-responsive"></a>
                 </div>
-                <div class="col-sm-4 text-center" style="padding-top: 5px; font-size: 12pt; text-transform: uppercase;">
-                    <div style="line-height: 16px; margin-bottom: 7px;">Официальный сайт<br>отеля Альградо</div>
+                <div class="col-sm-3 col-md-4 header-official">
+                    <span>Официальный сайт отеля Альградо</span>
                     <div><a href="https://www.instagram.com/algrado05/" target="_blank"><img src="img/icon-insta.jpg"></a></div>
                 </div>
-                <div class="col-sm-2" style="padding-top: 15px;">
+                <div class="col-sm-2 col-md-2 header-button">
                     <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#callbackModal">Задать вопрос</button>
                 </div>
-                <div class="col-sm-3 text-right">
+                <div class="col-sm-4 col-md-3 header-phones">
                     <div class="phone-number">
                         <span>+7 988 639-39-03</span>
                     </div>
@@ -59,7 +59,7 @@
     <section id="menu">
         <div class="container-fluid">
             <div class="navbar-header">
-                <div class="navbar-toggle collapsed" data-toggle="collapse" style="float: left; color: #fff; font-size: 16pt; margin: 5px 0 0 15px;">Меню</div>
+                <div class="navbar-toggle collapsed" data-toggle="collapse">Меню</div>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
                     <span class="sr-only">Меню</span>
                     <span class="icon-bar"></span>
@@ -83,7 +83,7 @@
         </div>
     </section>
 
-    <section style="position: relative; z-index: 9; top: 15px; margin-left:15px; margin-bottom: -90px;">
+    <section id="meteo">
         <!-- Gismeteo Informer (begin) -->
         <div id="GMI_240x90-3_ru" class="gm-info">
             <div style="position:relative;width:240px;height:90px;border:solid 1px;background:#F5F5F5;border-color:#EAEAEA #E4E4E4 #DDDDDD #E6E6E6;border-radius:4px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;">
@@ -341,26 +341,30 @@
             <div class="text-xl text-center">Фотогалерея</div>
             <p>&nbsp;</p>
             <div class="row gallery-photos">
-                <a class="gallery" href="img/photo_01.jpg" title="Закат на берегу Каспийского моря"><img src="img/icon_01.jpg"></a>
-                <a class="gallery" href="img/photo_02.jpg" title="Беседки"><img src="img/icon_02.jpg"></a>
-                <a class="gallery" href="img/photo_03.jpg" title="Вечер во дворе отеля"><img src="img/icon_03.jpg"></a>
-                <a class="gallery" href="img/photo_04.jpg" title="Вид с пентхауса"><img src="img/icon_04.jpg"></a>
-                <a class="gallery" href="img/photo_05.jpg" title="Наш бассейн"><img src="img/icon_05.jpg"></a>
-                <a class="gallery" href="img/photo_06.jpg" title="Наш прекрасный дворик"><img src="img/icon_06.jpg"></a>
-                <a class="gallery" href="img/photo_07.jpg" title="Бассейн"><img src="img/icon_07.jpg"></a>
-                <a class="gallery" href="img/photo_08.jpg" title="Бассейн"><img src="img/icon_08.jpg"></a>
-                <a class="gallery" href="img/photo_09.jpg" title="Невеста"><img src="img/icon_09.jpg"></a>
-                <a class="gallery" href="img/photo_10.jpg" title="Дворик"><img src="img/icon_10.jpg"></a>
-                <a class="gallery" href="img/photo_11.jpg" title="Невеста"><img src="img/icon_11.jpg"></a>
-                <a class="gallery" href="img/photo_12.jpg" title="Вид отеля со двора"><img src="img/icon_12.jpg"></a>
-                <a class="gallery" href="img/photo_13.jpg" title="Невеста"><img src="img/icon_13.jpg"></a>
-                <a class="gallery" href="img/photo_01.jpg" title="Закат на берегу Каспийского моря"><img src="img/icon_01.jpg"></a>
-                <a class="gallery" href="img/photo_02.jpg" title="Беседки"><img src="img/icon_02.jpg"></a>
-                <a class="gallery" href="img/photo_03.jpg" title="Вечер во дворе отеля"><img src="img/icon_03.jpg"></a>
-                <a class="gallery" href="img/photo_04.jpg" title="Вид с пентхауса"><img src="img/icon_04.jpg"></a>
-                <a class="gallery" href="img/photo_05.jpg" title="Наш бассейн"><img src="img/icon_05.jpg"></a>
-                <a class="gallery" href="img/photo_06.jpg" title="Наш прекрасный дворик"><img src="img/icon_06.jpg"></a>
-                <a class="gallery" href="img/photo_07.jpg" title="Бассейн"><img src="img/icon_07.jpg"></a>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_01.jpg" title="Закат на берегу Каспийского моря"><img src="img/icon_01.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_02.jpg" title="Беседки"><img src="img/icon_02.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_03.jpg" title="Вечер во дворе отеля"><img src="img/icon_03.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_04.jpg" title="Вид с пентхауса"><img src="img/icon_04.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_05.jpg" title="Наш бассейн"><img src="img/icon_05.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_06.jpg" title="Наш прекрасный дворик"><img src="img/icon_06.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_07.jpg" title="Бассейн"><img src="img/icon_07.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_08.jpg" title="Бассейн"><img src="img/icon_08.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_09.jpg" title="Невеста"><img src="img/icon_09.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_10.jpg" title="Дворик"><img src="img/icon_10.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_11.jpg" title="Невеста"><img src="img/icon_11.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_12.jpg" title="Вид отеля со двора"><img src="img/icon_12.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_13.jpg" title="Невеста"><img src="img/icon_13.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_01.jpg" title="Закат на берегу Каспийского моря"><img src="img/icon_01.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_02.jpg" title="Беседки"><img src="img/icon_02.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_03.jpg" title="Вечер во дворе отеля"><img src="img/icon_03.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_04.jpg" title="Вид с пентхауса"><img src="img/icon_04.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_05.jpg" title="Наш бассейн"><img src="img/icon_05.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_06.jpg" title="Наш прекрасный дворик"><img src="img/icon_06.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_07.jpg" title="Бассейн"><img src="img/icon_07.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_04.jpg" title="Вид с пентхауса"><img src="img/icon_04.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_05.jpg" title="Наш бассейн"><img src="img/icon_05.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_06.jpg" title="Наш прекрасный дворик"><img src="img/icon_06.jpg" class="img-responsive"></a></div>
+                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_07.jpg" title="Бассейн"><img src="img/icon_07.jpg" class="img-responsive"></a></div>
             </div>
             <p>&nbsp;</p>
             <div id="map_top"></div>
