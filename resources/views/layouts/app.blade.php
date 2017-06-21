@@ -273,30 +273,13 @@
             <div class="text-xl text-center">Фотогалерея</div>
             <p>&nbsp;</p>
             <div class="row gallery-photos">
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_01.jpg" title="Закат на берегу Каспийского моря"><img src="img/icon_01.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_02.jpg" title="Беседки"><img src="img/icon_02.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_03.jpg" title="Вечер во дворе отеля"><img src="img/icon_03.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_04.jpg" title="Вид с пентхауса"><img src="img/icon_04.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_05.jpg" title="Наш бассейн"><img src="img/icon_05.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_06.jpg" title="Наш прекрасный дворик"><img src="img/icon_06.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_07.jpg" title="Бассейн"><img src="img/icon_07.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_08.jpg" title="Бассейн"><img src="img/icon_08.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_09.jpg" title="Невеста"><img src="img/icon_09.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_10.jpg" title="Дворик"><img src="img/icon_10.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_11.jpg" title="Невеста"><img src="img/icon_11.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_12.jpg" title="Вид отеля со двора"><img src="img/icon_12.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_13.jpg" title="Невеста"><img src="img/icon_13.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_01.jpg" title="Закат на берегу Каспийского моря"><img src="img/icon_01.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_02.jpg" title="Беседки"><img src="img/icon_02.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_03.jpg" title="Вечер во дворе отеля"><img src="img/icon_03.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_04.jpg" title="Вид с пентхауса"><img src="img/icon_04.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_05.jpg" title="Наш бассейн"><img src="img/icon_05.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_06.jpg" title="Наш прекрасный дворик"><img src="img/icon_06.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_07.jpg" title="Бассейн"><img src="img/icon_07.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_04.jpg" title="Вид с пентхауса"><img src="img/icon_04.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_05.jpg" title="Наш бассейн"><img src="img/icon_05.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_06.jpg" title="Наш прекрасный дворик"><img src="img/icon_06.jpg" class="img-responsive"></a></div>
-                <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="img/photo_07.jpg" title="Бассейн"><img src="img/icon_07.jpg" class="img-responsive"></a></div>
+                @if ($gallery->photos->count())
+                    <div class="gallery-photos">
+                        @foreach ($gallery->photos as $val)
+                            <div class="col-lg-1 col-sm-2 col-xs-3"><a class="gallery" href="/images/original/{{ $val->img_url . $val->image }}" title="{{ $val->name }}"><img src="/images/large/{{ $val->img_url . $val->image }}" class="img-responsive"></a></div>
+                        @endforeach
+                    </div>
+                @endif
             </div>
             <p>&nbsp;</p>
             <div id="map_top"></div>
