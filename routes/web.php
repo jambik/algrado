@@ -28,6 +28,9 @@ Route::group(['prefix' => 'admin'], function()
             Route::match(['get', 'post'], 'categories/move', ['as' => 'admin.categories.move', 'uses' => 'Admin\CategoriesController@move']);
 
             ## Products
+            Route::resource('rooms', 'Admin\RoomsController');
+
+            ## Products
             Route::resource('products', 'Admin\ProductsController');
 
             ## Galleries

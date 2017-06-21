@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Page;
+use App\Room;
 
 class IndexController extends FrontendController
 {
@@ -16,6 +17,8 @@ class IndexController extends FrontendController
     {
         $page = Page::find(1);
 
-        return view('index', compact('page'));
+        $rooms = Room::all();
+
+        return view('index', compact('page', 'rooms'));
     }
 }

@@ -131,85 +131,17 @@
             <div class="text-xl text-center">Наши номера</div>
             <p>&nbsp;</p>
             <div class="row">
-                <div class="col-sm-4 appartment-block">
-                    <div class="appartment-persons">
-                        <img src="img/icon-adult.png">
-                        <img src="img/icon-adult.png">
-                        <img src="img/icon-child-alpha.png">
-                        <img src="img/icon-child-alpha.png">
-                    </div>
-                    <div class="appartment-spec">2 кровати 140 х 200, 24 м<sup>2</sup></div>
-                    <div class="appartment-image"><img data-toggle="modal" data-target="#roomStandartTwin" src="img/appartment-1.jpg" class="img-responsive"></div>
-                    <div class="appartment-title">Стандарт Твин</div>
-                    <div class="appartment-description">стильные номера с двумя просторными кроватями, площадью 24 м<sup>2</sup></div>
-                    <div class="appartment-button"><button data-toggle="modal" data-target="#roomStandartTwin" class="btn btn-info">Подробнее</button></div>
-                </div>
 
-                <div class="col-sm-4 appartment-block">
-                    <div class="appartment-persons">
-                        <img src="img/icon-adult.png">
-                        <img src="img/icon-adult.png">
+                @foreach ($rooms as $item)
+                    <div class="col-sm-4 appartment-block">
+                        <div class="appartment-persons">{!! $item->capacity !!}</div>
+                        <div class="appartment-spec">{{ $item->spec }}</div>
+                        <div class="appartment-image"><img data-toggle="modal" data-target="#room{{ $item->id }}" src="/images/large/{{ $item->img_url.$item->image }}" class="img-responsive"></div>
+                        <div class="appartment-title">{{ $item->name }}</div>
+                        <div class="appartment-description">{{ $item->description }}</div>
+                        <div class="appartment-button"><button data-toggle="modal" data-target="#room{{ $item->id }}" class="btn btn-info">Подробнее</button></div>
                     </div>
-                    <div class="appartment-spec">1 кровать 160 х 200, 24 м<sup>2</sup></div>
-                    <div class="appartment-image"><img data-toggle="modal" data-target="#roomStandartDoubleTwin" src="img/appartment-2.jpg" class="img-responsive"></div>
-                    <div class="appartment-title">Стандарт Дабл Твин</div>
-                    <div class="appartment-description">стильные номера с двуспальной кроватью, площадью 24 м<sup>2</sup></div>
-                    <div class="appartment-button"><button data-toggle="modal" data-target="#roomStandartDoubleTwin" class="btn btn-info">Подробнее</button></div>
-                </div>
-
-                <div class="col-sm-4 appartment-block">
-                    <div class="appartment-persons">
-                        <img src="img/icon-adult.png">
-                        <img src="img/icon-adult.png">
-                        <img src="img/icon-child-alpha.png">
-                    </div>
-                    <div class="appartment-spec">кровать 160 х 200, диван, 32 м<sup>2</sup></div>
-                    <div class="appartment-image"><img data-toggle="modal" data-target="#roomStandartPlus" src="img/appartment-3.jpg" class="img-responsive"></div>
-                    <div class="appartment-title">Стандарт Плюс</div>
-                    <div class="appartment-description">Просторные номера, 32 м<sup>2</sup>. Пространство номера разделено на спальную и гостиную зону с мягкой мебелью</div>
-                    <div class="appartment-button"><button data-toggle="modal" data-target="#roomStandartPlus" class="btn btn-info">Подробнее</button></div>
-                </div>
-
-                <div class="col-sm-4 appartment-block">
-                    <div class="appartment-persons">
-                        <img src="img/icon-adult.png">
-                        <img src="img/icon-adult.png">
-                        <img src="img/icon-child-alpha.png">
-                    </div>
-                    <div class="appartment-spec">кровать 160 х 200, 24 м<sup>2</sup></div>
-                    <div class="appartment-image"><img data-toggle="modal" data-target="#roomStandartPlusView" src="img/appartment-4.jpg" class="img-responsive"></div>
-                    <div class="appartment-title">Стандарт Плюс с видом на море</div>
-                    <div class="appartment-description">Просторные номера 32 м<sup>2</sup> c видом на море. Пространство номера разделено на спальную и гостиную зону с мягкой мебелью</div>
-                    <div class="appartment-button"><button data-toggle="modal" data-target="#roomStandartPlusView" class="btn btn-info">Подробнее</button></div>
-                </div>
-
-                <div class="col-sm-4 appartment-block">
-                    <div class="appartment-persons">
-                        <img src="img/icon-adult.png">
-                        <img src="img/icon-adult.png">
-                        <img src="img/icon-adult-alpha.png">
-                        <img src="img/icon-adult-alpha.png">
-                    </div>
-                    <div class="appartment-spec">кровать, диван, 46 м<sup>2</sup></div>
-                    <div class="appartment-image"><img data-toggle="modal" data-target="#roomStudio" src="img/appartment-5.jpg" class="img-responsive"></div>
-                    <div class="appartment-title">Студия с видом на море</div>
-                    <div class="appartment-description">Просторные номера 46 м<sup>2</sup> c видом на море. Пространство номера разделено на спальную и гостиную зону с мягкой мебелью</div>
-                    <div class="appartment-button"><button data-toggle="modal" data-target="#roomStudio" class="btn btn-info">Подробнее</button></div>
-                </div>
-
-                <div class="col-sm-4 appartment-block">
-                    <div class="appartment-persons">
-                        <img src="img/icon-adult.png">
-                        <img src="img/icon-adult.png">
-                        <img src="img/icon-child-alpha.png">
-                        <img src="img/icon-child-alpha.png">
-                    </div>
-                    <div class="appartment-spec">150 м<sup>2</sup>, кровать, два дивана, 2 односпальные кровати</div>
-                    <div class="appartment-image"><img data-toggle="modal" data-target="#roomCottage" src="img/appartment-6.jpg" class="img-responsive"></div>
-                    <div class="appartment-title">Коттедж семейный</div>
-                    <div class="appartment-description">Уютные трехэтажные коттеджи  общей площадью 150 м<sup>2</sup> с гостиной, двумя санузлами, оборудованной кухней и детским мансардным этажом</div>
-                    <div class="appartment-button"><button data-toggle="modal" data-target="#roomCottage" class="btn btn-info">Подробнее</button></div>
-                </div>
+                @endforeach
             </div>
         </div>
         <div id="service_top"></div>

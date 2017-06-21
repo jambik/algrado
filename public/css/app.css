@@ -85,6 +85,9 @@ div.navbar-toggle { float: left; color: #fff; font-size: 16pt; margin: 5px 0 0 1
 .room-images .room-persons { margin: 0 0 20px 0; font-size: 12pt; }
 .room-description { font-weight: 300; font-size: 18pt; margin: 20px 0 0 0; }
 .room-comfort { margin: 20px 0 0 0; font-size: 12pt; }
+.room-note { font-size: 11pt; }
+.room-note li { margin: 10px 0 0 0; }
+
 
 #service { background: #eee; }
 .service-block { text-align: center; margin-bottom: 30px; }

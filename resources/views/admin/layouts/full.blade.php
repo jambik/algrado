@@ -70,9 +70,11 @@
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-4 hidden-print">
                 <ul class="list-group">
+                    <a class="list-group-item" href="{{ route('admin.rooms.index') }}"><i class="material-icons left">hotel</i> Номера</a>
                     <a class="list-group-item" href="{{ route('admin.pages.index') }}"><i class="material-icons left">content_copy</i> Страницы</a>
                     <a class="list-group-item" href="{{ route('admin.blocks.index') }}"><i class="material-icons left">text_format</i> Текстовые блоки</a>
                     <a class="list-group-item" href="{{ route('admin.slides.index') }}"><i class="material-icons left">photo_size_select_actual</i> Слайды</a>
+                    <a class="list-group-item" href="{{ route('admin.galleries.index') }}"><i class="material-icons left">photo_library</i> Фотогалереи</a>
                 </ul>
 
                 <ul class="list-group">

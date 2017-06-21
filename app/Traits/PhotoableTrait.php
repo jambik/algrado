@@ -46,8 +46,6 @@ trait PhotoableTrait
      */
     public function savePhoto(Request $request)
     {
-//        dd($request->all());
-
         $imageName      = strtolower(class_basename($this)) . '-' . $this->id;
         $imageExtension = strtolower($request->file('file')->getClientOriginalExtension());
 

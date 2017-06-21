@@ -9,7 +9,7 @@ class Large implements FilterInterface
 {
     public function applyFilter(Image $image)
     {
-        return $image->fit(480, 360, function ($constraint) {
+        return $image->fit(500, 300, function ($constraint) {
             $constraint->aspectRatio();
         });
     }

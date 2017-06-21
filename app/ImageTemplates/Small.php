@@ -9,7 +9,7 @@ class Small implements FilterInterface
 {
     public function applyFilter(Image $image)
     {
-        return $image->fit(120, 120, function ($constraint) {
+        return $image->fit(120, 72, function ($constraint) {
             $constraint->aspectRatio();
         });
     }
