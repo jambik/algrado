@@ -18,8 +18,6 @@
 
 @include('admin.partials._imageable')
 
-@include('admin.partials._headerable')
-
 <div class="form-group text-center">
     <button type="submit" class="btn btn-lg btn-primary"><i class="material-icons">check_circle</i> {{ $submitButtonText }}</button>
 </div>

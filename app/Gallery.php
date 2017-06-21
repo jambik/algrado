@@ -2,7 +2,6 @@
 
 namespace App;
 
-use App\Traits\HeaderableTrait;
 use App\Traits\ImageableTrait;
 use App\Traits\PhotoableTrait;
 use App\Traits\ResourceableTrait;
@@ -13,7 +12,7 @@ use Spatie\Activitylog\Traits\LogsActivity;
 
 class Gallery extends Model
 {
-    use ImageableTrait, PhotoableTrait, Sluggable, SluggableScopeHelpers, ResourceableTrait, HeaderableTrait, LogsActivity;
+    use ImageableTrait, PhotoableTrait, Sluggable, SluggableScopeHelpers, ResourceableTrait, LogsActivity;
 
     protected $table = 'galleries';
 
