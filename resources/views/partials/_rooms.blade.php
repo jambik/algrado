@@ -13,6 +13,7 @@
                                 <img src="/images/large/{{ $item->img_url.$item->image }}" class="img-responsive roomImage">
                                 @if ($item->photos->count())
                                     <div class="room-icons">
+                                        <img data-image="/images/large/{{ $item->img_url.$item->image }}" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="/images/small/{{ $item->img_url.$item->image }}">
                                         @foreach($item->photos as $photo)
                                             <img data-image="/images/large/{{ $item->photo_url.$photo->image }}" onclick="$('.roomImage').attr('src', $(this).data('image'));" src="/images/small/{{ $item->photo_url.$photo->image }}">
                                         @endforeach
