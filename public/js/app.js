@@ -72,35 +72,34 @@ $(document).ready(function() {
         });
     }
 
-
-    $('#roomStandartTwin').on('show.bs.modal', function (e) {
-        $('#room').val('Стандарт Твин');
-        $('#roomName').html('Стандарт Твин');
+    $('#room1').on('show.bs.modal', function (e) {
+        $('#room').val($('#room1Label').html());
+        $('#roomName').html($('#room1Label').html());
     });
 
-    $('#roomStandartDoubleTwin').on('show.bs.modal', function (e) {
-        $('#room').val('Стандарт Дабл Твин');
-        $('#roomName').html('Стандарт Дабл Твин');
+    $('#room2').on('show.bs.modal', function (e) {
+        $('#room').val($('#room2Label').html());
+        $('#roomName').html($('#room2Label').html());
     });
 
-    $('#roomStandartPlus').on('show.bs.modal', function (e) {
-        $('#room').val('Стандарт Плюс');
-        $('#roomName').html('Стандарт Плюс');
+    $('#room3').on('show.bs.modal', function (e) {
+        $('#room').val($('#room3Label').html());
+        $('#roomName').html($('#room3Label').html());
     });
 
-    $('#roomStandartPlusView').on('show.bs.modal', function (e) {
-        $('#room').val('Стандарт Плюс с видом на море');
-        $('#roomName').html('Стандарт Плюс с видом на море');
+    $('#room4').on('show.bs.modal', function (e) {
+        $('#room').val($('#room4Label').html());
+        $('#roomName').html($('#room4Label').html());
     });
 
-    $('#roomStudio').on('show.bs.modal', function (e) {
-        $('#room').val('Студия с видом на море');
-        $('#roomName').html('Студия с видом на море');
+    $('#room5').on('show.bs.modal', function (e) {
+        $('#room').val($('#room5Label').html());
+        $('#roomName').html($('#room5Label').html());
     });
 
-    $('#roomCottage').on('show.bs.modal', function (e) {
-        $('#room').val('Коттедж семейный');
-        $('#roomName').html('Коттедж семейный');
+    $('#room6').on('show.bs.modal', function (e) {
+        $('#room').val($('#room6Label').html());
+        $('#roomName').html($('#room6Label').html());
     });
 
 });
