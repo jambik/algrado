@@ -138,10 +138,10 @@ class CommonController extends FrontendController
         if ($request->ajax()){
             return response()->json([
                 'status' => 'ok',
-                'message' => 'Бронирование номера оформлено',
+                'message' => 'Спасибо за проявленный интерес. С Вами свяжутся в ближайшее время.',
             ]);
         }
 
-        return redirect(route('index'))->with('status', 'Бронирование номера оформлено');
+        return redirect(route('index'))->with('status', 'Спасибо за проявленный интерес. С Вами свяжутся в ближайшее время.');
     }
 }
