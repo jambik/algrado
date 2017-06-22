@@ -6,6 +6,7 @@ use App\Gallery;
 use App\Http\Requests;
 use App\Page;
 use App\Room;
+use App\Service;
 
 class IndexController extends FrontendController
 {
@@ -20,7 +21,8 @@ class IndexController extends FrontendController
 
         $rooms = Room::all();
         $gallery = Gallery::first();
+        $services = Service::all();
 
-        return view('index', compact('page', 'rooms', 'gallery'));
+        return view('index', compact('page', 'rooms', 'gallery', 'services'));
     }
 }

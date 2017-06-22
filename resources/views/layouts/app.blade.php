@@ -150,59 +150,18 @@
             <div class="text-xl text-center">Услуги и удобства</div>
             <p>&nbsp;</p>
             <div class="row">
-                <div class="col-lg-3 col-sm-4 service-block">
-                    <div class="inner">
-                        <div class="service-image"><img src="img/service-food.png" class=""></div>
-                        <div class="service-title">Питание</div>
-                        <div class="service-description">Отель Альградо рад предложить своим гостям богатый выбор блюд колоритной национальной и европейской кухни в нашем ресторане.</div>
-                        <div class="service-button"><button data-toggle="modal" data-target="#serviceFood" class="btn btn-default">Подробнее</button></div>
+                @foreach ($services as $item)
+                    <div class="col-lg-3 col-sm-4 service-block{{ $loop->iteration==5 ? ' col-lg-offset-3' : '' }}">
+                        <div class="inner">
+                            <div class="service-image"><img src="/images/original/{{ $item->img_url.$item->image }}" class=""></div>
+                            <div style="min-height: 130px;">
+                                <div class="service-title">{{ nl2br(e($item->name)) }}</div>
+                                <div class="service-description">{{ $item->short }}</div>
+                            </div>
+                            <div class="service-button"><button data-toggle="modal" data-target="#service{{ $item->id }}" class="btn btn-default">Подробнее</button></div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-4 service-block">
-                    <div class="inner">
-                        <div class="service-image"><img src="img/service-beach.png" class=""></div>
-                        <div class="service-title">Пляжный отдых</div>
-                        <div class="service-description">В отеле Альградо Вас ждет незабываемый пляжный отдых на оборудованном пляже, который находится в шаговой близости.<br><br></div>
-                        <div class="service-button"><button data-toggle="modal" data-target="#serviceBeach" class="btn btn-default">Подробнее</button></div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-4 service-block">
-                    <div class="inner">
-                        <div class="service-image"><img src="img/service-pool.png" class=""></div>
-                        <div class="service-title">Бассейн</div>
-                        <div class="service-description">На территории гостиницы имеются два открытых подогреваемых плавательных бассейна  для взрослых и детей.<br><br></div>
-                        <div class="service-button"><button data-toggle="modal" data-target="#servicePool" class="btn btn-default">Подробнее</button></div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-4 service-block">
-                    <div class="inner">
-                        <div class="service-image"><img src="img/service-kids.png" class=""></div>
-                        <div class="service-title">Детский клуб / анимация</div>
-                        <div class="service-description">Альградо - это мир в котором дети проводят вместе время.</div>
-                        <div class="service-button"><button data-toggle="modal" data-target="#serviceKids" class="btn btn-default">Подробнее</button></div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-lg-offset-3 col-sm-4 service-block">
-                    <div class="inner">
-                        <div class="service-image"><img src="img/service-event.png" class=""></div>
-                        <div class="service-title">Торжества / мероприятия</div>
-                        <div class="service-description">Это может быть пышное торжество, а может быть скромная церемония только для членов семьи, а затем ужин для близких родственников.</div>
-                        <div class="service-button"><button data-toggle="modal" data-target="#serviceEvent" class="btn btn-default">Подробнее</button></div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-4 service-block">
-                    <div class="inner">
-                        <div class="service-image"><img src="img/service-wedding.png" class=""></div>
-                        <div class="service-title">Свадебное предложение</div>
-                        <div class="service-description">Альградо открывает свои двери навстречу свадьбе Bашей мечты. Команда специалистов своего дела превращает Bашу мечту о свадьбе в реальность.</div>
-                        <div class="service-button"><button data-toggle="modal" data-target="#serviceWedding" class="btn btn-default">Подробнее</button></div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <div id="conditions_top"></div>
