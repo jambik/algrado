@@ -134,8 +134,10 @@
 
                 @foreach ($rooms as $item)
                     <div class="col-sm-4 appartment-block">
-                        <div class="appartment-persons">{!! $item->capacity !!}</div>
-                        <div class="appartment-spec">{{ $item->spec }}</div>
+                        <div class="appartment-top">
+                            <div class="appartment-persons">{!! $item->capacity !!}</div>
+                            <div class="appartment-spec">{{ $item->spec }}</div>
+                        </div>
                         <div class="appartment-image"><img data-toggle="modal" data-target="#room{{ $item->id }}" src="/images/large/{{ $item->img_url.$item->image }}" class="img-responsive"></div>
                         <div class="appartment-title">{{ $item->name }}</div>
                         <div class="appartment-description">{{ $item->description }}</div>
