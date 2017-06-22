@@ -44,13 +44,7 @@
                     <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#callbackModal">Задать вопрос</button>
                 </div>
                 <div class="col-sm-4 col-md-3 header-phones">
-                    <div class="phone-number">
-                        <span>+7 988 639-39-03</span>
-                    </div>
-                    <div class="phone-number">
-                        <span>+7 988 639-39-03</span>
-                    </div>
-                    <div class="worktime">РЕЖИМ РАБОТЫ С 9:00 ДО 18:00</div>
+                    {!! $blocks['phones']->text !!}
                 </div>
             </div>
         </div>
