@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\BackendController;
 use App\Room;
 use Illuminate\Http\Request;
+use Image;
 
 class RoomsController extends BackendController
 {
@@ -52,7 +53,13 @@ class RoomsController extends BackendController
             'name' => 'required',
         ]);
 
-        $this->model->create($request->all());
+        $item = $this->model->create($request->all());
+
+        if (request()->hasFile('image'))
+        {
+            $imageFile = Image::make($item->imagePath() . DIRECTORY_SEPARATOR . $item->image);
+            $imageFile->fit(1600, 900)->save();
+        }
 
         return redirect(route('admin.'.$this->resourceName.'.index'));
     }
@@ -97,6 +104,12 @@ class RoomsController extends BackendController
         $item = $this->model->findOrFail($id);
 
         $item->update($request->all());
+
+        if (request()->hasFile('image'))
+        {
+            $imageFile = Image::make($item->imagePath() . DIRECTORY_SEPARATOR . $item->image);
+            $imageFile->fit(1600, 900)->save();
+        }
 
         return redirect(route('admin.'.$this->resourceName.'.index'));
     }

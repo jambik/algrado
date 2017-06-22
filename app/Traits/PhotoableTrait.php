@@ -5,6 +5,7 @@ namespace App\Traits;
 use App\Photo;
 use File;
 use Illuminate\Http\Request;
+use Image;
 
 trait PhotoableTrait
 {
@@ -50,6 +51,9 @@ trait PhotoableTrait
         $imageExtension = strtolower($request->file('file')->getClientOriginalExtension());
 
         $photoFile = $request->file('file')->move($this->photoPath(), $imageName . '-' . uniqid() . '.' . $imageExtension);
+
+        $imageFile = Image::make($photoFile);
+        $imageFile->fit(1600, 900)->save();
 
         $item = $this->photos()->create([
             'image'   => $photoFile->getFilename(),
