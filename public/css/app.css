@@ -74,7 +74,7 @@ div.navbar-toggle { float: left; color: #fff; font-size: 16pt; margin: 5px 0 0 1
 .appartment-spec { display: inline-block; font-weight: 700; font-size: 11pt; color: #fff; }
 .appartment-image img { margin: 0 auto; }
 .appartment-title { text-shadow: 1px 1px 1px rgba(0,0,0,0.2); font-weight: 300; font-size: 19pt; padding: 10px 0; }
-.appartment-description { padding: 0 3% 10px 3%; font-weight: 300; height: 80px; font-size: 13pt; line-height: 20px; }
+.appartment-description { padding: 0 3% 10px 3%; font-weight: 300; height: 80px; overflow: hidden; font-size: 13pt; line-height: 20px; }
 .appartment-button { padding: 20px 0 20px 0; }
 
 .room-icons { margin: 10px 0 20px 0; }
