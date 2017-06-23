@@ -119,7 +119,7 @@
     </section>
 
     <section id="appartments">
-        <div class="container-fluid">
+        <div class="container">
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <div class="text-xl text-center">Наши номера</div>
@@ -127,15 +127,17 @@
             <div class="row">
 
                 @foreach ($rooms as $item)
-                    <div class="col-sm-4 appartment-block">
-                        <div class="appartment-top">
-                            <div class="appartment-persons">{!! $item->capacity !!}</div>
-                            <div class="appartment-spec">{{ $item->spec }}</div>
+                    <div class="col-sm-6 col-md-4 appartment-block">
+                        <div class="inner">
+                            <div class="appartment-title">{{ $item->name }}</div>
+                            <div class="appartment-image"><img data-toggle="modal" data-target="#room{{ $item->id }}" src="/images/large/{{ $item->img_url.$item->image }}" class="img-responsive"></div>
+                            <div class="appartment-top">
+                                <div class="appartment-persons">{!! $item->capacity !!}</div>
+                                <div class="appartment-spec">{{ $item->spec }}</div>
+                            </div>
+                            <div class="appartment-description">{{ $item->description }}</div>
+                            <div class="appartment-button"><button data-toggle="modal" data-target="#room{{ $item->id }}" class="btn btn-default">Подробнее</button></div>
                         </div>
-                        <div class="appartment-image"><img data-toggle="modal" data-target="#room{{ $item->id }}" src="/images/large/{{ $item->img_url.$item->image }}" class="img-responsive"></div>
-                        <div class="appartment-title">{{ $item->name }}</div>
-                        <div class="appartment-description">{{ $item->description }}</div>
-                        <div class="appartment-button"><button data-toggle="modal" data-target="#room{{ $item->id }}" class="btn btn-info">Подробнее</button></div>
                     </div>
                 @endforeach
             </div>
