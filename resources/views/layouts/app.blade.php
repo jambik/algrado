@@ -183,7 +183,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-5">
                     <div class="time text-center">
-                        <div class="time-numbers">13.00 <img src="img/arrow.png"> 11.00</div>
+                        <div class="time-numbers">13:00 <img src="img/arrow.png"> 11:00</div>
                         время заезда &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; время выезда
                     </div>
                     <div class="registration-block">
@@ -191,7 +191,7 @@
                         <p>Пожалуйста, свяжитесь с отелем.</p>
                         <div>&nbsp;</div>
                         <p><strong>Поздняя выписка</strong></p>
-                        <p>За выезд до 15.00 взимается плата в размере 50% от стоимости номера, за выезд после 15.00 взимается плата в размере 100% от стоимости номера</p>
+                        <p>За выезд до 15:00 взимается плата в размере 50% от стоимости номера, за выезд после 15:00 взимается плата в размере 100% от стоимости номера</p>
                         <div>&nbsp;</div>
                         <p><strong>Отмена</strong></p>
                         <p>В случае отмены, изменения бронирования или незаезда, взимается штраф в размере 100% стоимости первых суток проживания.</p>
